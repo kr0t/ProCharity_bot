@@ -19,6 +19,7 @@ jobs:
   build_and_push_to_ghcr:
     name: Push Docker image to Github Container Registry
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -64,6 +65,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    environment: test
     needs: build_and_push_to_ghcr
     steps:
       - name: executing remote ssh commands to deploy

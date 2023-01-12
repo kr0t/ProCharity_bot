@@ -42,7 +42,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo mkdir -p ${{ env.DEPLOY_PATH }}
-            sudo chmod +x ${{ env.DEPLOY_PATH }}
+            sudo chmod 777 ${{ env.DEPLOY_PATH }}
       - name: Copy docker-compose to server
         uses: appleboy/scp-action@master
         with:

@@ -1,6 +1,6 @@
 services:
     back:
-        image: "ghcr.io/procharity/procharity_bot_back:test_deploy"
+        image: "ghcr.io/kr0t/procharity_bot_back:test_deploy"
         restart: "always"
         depends_on:
             - db
@@ -16,7 +16,7 @@ services:
             - /code/data:/back/bot_persistence_file/
 
     front:
-        image: "ghcr.io/procharity/procharity_bot_front:test_deploy"
+        image: "ghcr.io/kr0t/procharity_bot_front:test_deploy"
         restart: "always"
         depends_on:
             - back

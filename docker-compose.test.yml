@@ -1,5 +1,3 @@
-version: '3.3'
-
 services:
     back:
         image: "ghcr.io/procharity/procharity_bot_back:test_deploy"
